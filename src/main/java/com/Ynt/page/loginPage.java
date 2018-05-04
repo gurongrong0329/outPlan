@@ -30,10 +30,10 @@ public class loginPage {
         this.elementLocator(By.id(data.getValue("e_password"))).sendKeys(data.getValue(password));
         Thread.sleep(1000);
         this.elementLocator(By.xpath(data.getValue("e_loginSubmit"))).click();
-        Actions action=new Actions(this.driver);
-        action.clickAndHold(this.elementLocator(By.xpath(data.getValue("e_productCenter")))).perform();
-        Thread.sleep(1000);
-        this.elementLocator(By.xpath(data.getValue("e_callCenter"))).click();
+        //Actions action=new Actions(this.driver);
+        //action.clickAndHold(this.elementLocator(By.xpath(data.getValue("e_productCenter")))).perform();
+        //Thread.sleep(1000);
+        this.elementLocator(By.xpath(data.getValue("e_outplan"))).click();
         Thread.sleep(2000);
         this.elementLocator(By.xpath(data.getValue("e_freeUse"))).click();
         Thread.sleep(2000);
