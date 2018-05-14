@@ -14,7 +14,6 @@ public class outplanPage extends loginPage{
     public outplanPage(WebDriver driver)
     {
         super(driver);
-        
     }
     private WebElement elementLocator(By element)
     {
@@ -52,11 +51,11 @@ public class outplanPage extends loginPage{
         Thread.sleep(1000);
     }
     
-    public void deletePlan(String planName)throws InterruptedException{
+    public void deletePlan(String planName,WebDriver driver)throws InterruptedException{
         int i=0;
         while (true)
         {
-            this.driver.navigate().refresh();
+            driver.navigate().refresh();
             try {
                 elementLocator(By.xpath(data.getValue("e_deletePlan").replace("%var%",planName))).click();
                 Thread.sleep(2000);

@@ -31,9 +31,9 @@ public class loginTest {
         this.page.loginYnt_ai("account","password");
         this.page.getHandle(data.getValue("titleName2"));
         Thread.sleep(2000);
-        this.opage=new outplanPage(this.driver);
+        this.opage=this.page.outPlanModel();
         opage.createPlan("外呼计划自动化测试","附加费",System.getProperty("user.dir") + "\\config\\data\\uploadNumber.exe");
-        opage.deletePlan("外呼计划自动化测试");
+        opage.deletePlan("外呼计划自动化测试",this.driver);
     }
     
     @AfterTest

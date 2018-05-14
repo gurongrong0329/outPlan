@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import java.util.Set;
 
 public class loginPage {
-    private WebDriver driver;
+    public WebDriver driver;
     private ParseProperties data = new ParseProperties(System.getProperty("user.dir") + "\\config\\data\\parameter.properties");
     
     public loginPage(WebDriver driver)
@@ -49,6 +49,9 @@ public class loginPage {
                 break;
             }
         }
-        
+    }
+    public outplanPage outPlanModel(){
+        this.elementLocator(By.xpath(data.getValue("e_outplanModel"))).click();
+        return new outplanPage(this.driver);
     }
 }
