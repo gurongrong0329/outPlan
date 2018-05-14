@@ -62,7 +62,6 @@ public class outplanPage extends loginPage{
                 Thread.sleep(2000);
                 elementLocator(By.xpath(data.getValue("e_commit"))).click();
                 Thread.sleep(1000);
-                System.out.println("删除成功！");
                 break;
             }catch (NoSuchElementException e){
                 System.out.println("正在通话.........");
